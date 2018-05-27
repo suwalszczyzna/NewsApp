@@ -122,16 +122,15 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         if(sections.endsWith("|")){
             sections = sections.substring(0, sections.length()-1) + "";
         }
-        uriBuilder.appendQueryParameter("section", sections);
+        if (!sections.isEmpty()){
+            uriBuilder.appendQueryParameter("section", sections);
+        }
         uriBuilder.appendQueryParameter("page-size", numArticles);
         uriBuilder.appendQueryParameter("show-fields", "thumbnail,byline");
         uriBuilder.appendQueryParameter("api-key", "test");
-
         Log.d(TAG, "uriBuilder: " + uriBuilder.toString());
         return new ArticleLoader(this, uriBuilder.toString());
     }
-
-
 
     @Override
     public void onLoadFinished(Loader<List<Article>> loader, List<Article> articles) {

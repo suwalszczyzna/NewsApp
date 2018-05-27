@@ -1,13 +1,12 @@
 package pl.com.suwala.newsapp;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceManager;
-
 import android.support.v7.app.AppCompatActivity;
-
 
 public class SettingsActivity extends AppCompatActivity {
 
@@ -41,6 +40,12 @@ public class SettingsActivity extends AppCompatActivity {
             String preferenceString = preferences.getString(preference.getKey(), "");
             onPreferenceChange(preference, preferenceString);
         }
+    }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent mainIntent = new Intent (SettingsActivity.this, MainActivity.class);
+        startActivity(mainIntent);
     }
 
 }
