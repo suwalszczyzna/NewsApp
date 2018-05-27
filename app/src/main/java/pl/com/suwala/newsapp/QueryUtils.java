@@ -69,7 +69,7 @@ public final class QueryUtils {
                 Log.e(LOG_TAG, "Error response code: " + urlConnection.getResponseCode());
             }
         } catch (IOException e) {
-            Log.e(LOG_TAG, "Problem retrieving the earthquake JSON results.", e);
+            Log.e(LOG_TAG, "Problem retrieving the article JSON results.", e);
         } finally {
             if (urlConnection != null) {
                 urlConnection.disconnect();
@@ -95,15 +95,15 @@ public final class QueryUtils {
         return output.toString();
     }
 
-    public static ArrayList<Article> extractFeatureFromJSON( String earthquakeJSON) {
+    public static ArrayList<Article> extractFeatureFromJSON( String articleJSON) {
 
-        if (TextUtils.isEmpty(earthquakeJSON)) {
+        if (TextUtils.isEmpty(articleJSON)) {
             return null;
         }
         ArrayList<Article> articles = new ArrayList<>();
 
         try {
-            JSONObject baseJsonResponse = new JSONObject(earthquakeJSON);
+            JSONObject baseJsonResponse = new JSONObject(articleJSON);
 
             JSONObject response = baseJsonResponse.getJSONObject("response");
             JSONArray results = response.getJSONArray("results");
@@ -147,7 +147,7 @@ public final class QueryUtils {
             }
 
         } catch (JSONException e) {
-            Log.e(LOG_TAG, "Problem parsing the earthquake JSON results", e);
+            Log.e(LOG_TAG, "Problem parsing the article JSON results", e);
         }
 
         return articles;

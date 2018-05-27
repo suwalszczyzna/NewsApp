@@ -23,59 +23,28 @@ public class Article {
         this.sectionName = sectionName;
     }
 
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
     public String getTitle() {
         return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
     }
 
     public String getAuthor() {
         return author;
     }
 
-    public void setAuthor(String author) {
-        this.author = author;
-    }
-
     public String getDate() {
         return date;
-    }
-
-    public void setDate(String date) {
-        this.date = date;
     }
 
     public String getUrl() {
         return url;
     }
 
-    public void setUrl(String url) {
-        this.url = url;
-    }
-
     public Drawable getImgThumbnail() {
         return imgThumbnail;
-    }
-
-    public void setImgThumbnail(Drawable imgThumbnail) {
-        this.imgThumbnail = imgThumbnail;
     }
 
     public String getSectionName() {
         return sectionName;
     }
 
-    public void setSectionName(String sectionName) {
-        this.sectionName = sectionName;
-    }
 }

@@ -1,0 +1,51 @@
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/settings_title">
+
+
+
+    <EditTextPreference
+        android:defaultValue="@string/settings_num_articles_default"
+        android:inputType="numberDecimal"
+        android:key="@string/settings_num_articles_key"
+        android:selectAllOnFocus="true"
+        android:title="@string/settings_num_articles_label" />
+
+    <PreferenceCategory
+        android:summary="Favourites categories"
+        android:title="Choose categories" >
+
+        <CheckBoxPreference
+            android:key="books"
+            android:title="@string/books" />
+        <CheckBoxPreference
+            android:key="business"
+            android:title="@string/business" />
+        <CheckBoxPreference
+            android:key="fashion"
+            android:title="@string/fashion" />
+        <CheckBoxPreference
+            android:key="games"
+            android:title="@string/games" />
+        <CheckBoxPreference
+            android:key="lifeandstyle"
+            android:title="@string/lifestyle" />
+        <CheckBoxPreference
+            android:key="money"
+            android:title="@string/money" />
+        <CheckBoxPreference
+            android:key="science"
+            android:title="@string/science" />
+        <CheckBoxPreference
+            android:key="sport"
+            android:title="@string/sport" />
+        <CheckBoxPreference
+            android:key="technology"
+            android:title="@string/technology" />
+        <CheckBoxPreference
+            android:key="travel"
+            android:title="@string/travel" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
