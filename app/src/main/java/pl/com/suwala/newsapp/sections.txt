@@ -1,0 +1,10 @@
+books
+business
+fashion
+games
+lifeandstyle
+money
+science
+sport
+technology
+travel
